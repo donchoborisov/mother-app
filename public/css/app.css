@@ -3,117 +3,229 @@ body {
    
 }
 
+
+
+
 * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    padding: 1rem;
-  }
-  
+  box-sizing: border-box;
+}
+
+
+.alert {
+  padding: 20px;
+  background-color: 	#0c0;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+
+
+
+.contain {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  margin-top: 60px;
+ 
+}
+@media (min-width: 600px) {
   .contain {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em;
-  }
-  @media (min-width: 600px) {
-    .contain {
-      padding: 0;
-    }
-  }
-  
-  h3,
-  ul {
-    margin: 0;
-  }
-  
-  h3 {
-    margin-bottom: 1rem;
-  }
-  
-  input:focus,
-  textarea:focus {
-    outline: 3px solid gold;
-  }
-  
-  input,
-  textarea,
-  select,
-  button {
-    width: 100%;
-    border: 1px solid #000;
-  }
-  
-  .wrapper {
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-  }
-  .wrapper > * {
-    padding: 1em;
-  }
-  @media (min-width: 700px) {
-    .wrapper {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-    }
-    .wrapper > * {
-      padding: 2em 2em;
-    }
-  }
-  
-  ul {
-    list-style: none;
     padding: 0;
   }
-  
-  .contacts {
-    background: #4b5195;
-    color: #fff;
-  }
-  
-  .form {
-    background: #fff;
-  }
-  
-  form {
+}
+
+h3,
+ul {
+  margin: 0;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 3px solid gold;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.wrapper {
+
+  height: 500px;
+}
+.wrapper > * {
+  padding: 1em;
+}
+@media (min-width: 700px) {
+  .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 2fr;
   }
-  form label {
-    display: block;
+  .wrapper > * {
+    padding: 2em 2em;
   }
-  form p {
-    margin: 0;
-  }
-  
-  .full-width {
-    grid-column: 1 / 3;
-  }
-  
-  button,
-  input,
-  select,
-  textarea {
-    padding: 1em;
-  }
-  
-  button {
-    background: lightgrey;
-    width: 100%;
-    border: 0;
-  }
-  button:hover, button:focus {
-    background: gold;
-    outline: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-login {
+margin-top: 35px;
+margin-right: 50px;
+color: #fff;
+font-size: larger;
+}
+
+.user-link {
+  text-decoration: none;
+}
+
+
+.contacts {
+ 
+  color: #fff;
+}
+
+.form {
+  background: #fff;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+form label {
+  display: block;
+}
+form p {
+  margin: 0;
+}
+
+.full-width {
+  grid-column: 1 / 3;
+}
+
+button,
+input,
+select,
+textarea {
+  padding: 1em;
+}
+
+button {
+  background: lightgrey;
+  width: 100%;
+  border: 0;
+}
+button:hover, button:focus {
+  background: gold;
+  outline: 0;
+}
+
+.errors {
+  font-size: 12px;
+  color: red;
+}
+
+.success {
+  padding: 1em;
+  background-color: gold;
+}
+
+.container-advert {
+
+  margin-top: 50px;
+
+}
+
+.advert-home {
+  border:1px solid #bbb;
+  border-radius: 4px;
+  padding: 5px;
+  width:150px;
+}
+
+.show {
+  border:1px solid #bbb;
+  border-radius: 4px;
+  padding: 5px;
+  width:600px;
+  -o-object-fit:cover;
+     object-fit:cover;
+}
+
+.show-cont{
+  text-align: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+}
+
+.val-cont {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.item {
+  text-align: center;
+  border: 1px solid #4b5195;
+  height: 55px;
+  width: 300px;
   }
 
-  .errors {
-    font-size: 12px;
-    color: red;
+  .item-text {
+    text-transform: capitalize;
+    font-weight:light;
+    font-size:large;
+    color: #4b5195;
+    
   }
 
-  .success {
-    padding: 1em;
-    background-color: gold;
+  .advert-name{
+    text-transform: capitalize; 
   }
+
+  .box {
+    margin-top: 50px;
+  }
+
+
+  .img-edit {
+    width: 500px;
+    height: 300px;
+  }
+
+

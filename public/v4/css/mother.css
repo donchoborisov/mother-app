@@ -1,0 +1,1746 @@
+/* colours */
+
+/* structural */
+
+/* Fonts */
+
+@font-face {
+  font-family: "gilroy";
+  font-weight: 100;
+  src: url("/v4/fonts/gilroy-light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "gilroy";
+  font-weight: 400;
+  src: url("/v4/fonts/gilroy-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "gilroy";
+  font-weight: 600;
+  src: url("/v4/fonts/gilroy-semibold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "gilroy";
+  font-weight: 700;
+  src: url("/v4/fonts/gilroy-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "gilroy";
+  font-weight: 800;
+  src: url("/v4/fonts/gilroy-extrabold.woff") format("woff");
+}
+
+@-webkit-keyframes pulse-22 {
+  0% {
+    background-size: 22px 22px;
+  }
+
+  50% {
+    background-size: 22px 15px;
+  }
+
+  100% {
+    background-size: 22px 22px;
+  }
+}
+
+@keyframes pulse-22 {
+  0% {
+    background-size: 22px 22px;
+  }
+
+  50% {
+    background-size: 22px 15px;
+  }
+
+  100% {
+    background-size: 22px 22px;
+  }
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: #eff1f3;
+  padding: 0;
+  margin: 0;
+  color: #1e1e1e;
+  font-family: "gilroy";
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.container {
+  width: 1580px;
+  margin: 0 auto;
+  display: grid;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1060px) and (max-width: 1600px) {
+  .container {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  .container {
+    width: 760px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: auto;
+  }
+}
+
+.body .container {
+  padding: 0 10px;
+}
+
+.box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.button {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  background: #4d5fd3;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: grid;
+  grid-gap: 10px;
+  text-decoration: none;
+  align-items: center;
+  grid-auto-flow: column;
+  transition: background-color 200ms ease-in-out;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.button img {
+  justify-self: end;
+}
+
+.button.img-only {
+  padding: 10px;
+}
+
+.button.img-only img {
+  justify-self: center;
+  padding: 0;
+}
+
+.button span {
+  justify-self: start;
+}
+
+.button:hover {
+  background: rgba(77, 95, 211, 0.8);
+}
+
+header .menu {
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  margin: 0;
+  padding: 0 0 0 10px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  header .menu {
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+header .menu li {
+  font-family: "gilroy";
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  header .menu li {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header .menu li {
+    display: none;
+  }
+
+  header .menu li.logo {
+    display: block;
+  }
+}
+
+header .menu li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 200ms ease-in-out;
+  padding: 10px;
+}
+
+header .menu li.active a,
+header .menu li a:hover {
+  color: #ffffff;
+}
+
+header.top {
+  background: #4d5fd3;
+}
+
+header.top > div {
+  grid-template-columns: 1fr auto;
+}
+
+@media screen and (max-width: 800px) {
+  header.top .menu {
+    padding: 40px 0 0 20px;
+  }
+}
+
+header.top .menu li.logo {
+  padding: 25px 14px 25px 0;
+}
+
+header.top .menu li.logo a {
+  padding: 0;
+}
+
+header.top .menu li.logo img {
+  width: 120px;
+}
+
+header.top .user {
+  list-style: none;
+  padding: 0 10px 0 0;
+  margin: 0;
+  display: grid;
+}
+
+@media screen and (max-width: 800px) {
+  header.top .user {
+    padding: 40px 20px 0 0;
+  }
+}
+
+header.top .user .user-account {
+  text-align: right;
+  align-self: end;
+}
+
+header.top .user .user-account > div {
+  position: relative;
+}
+
+header.top .user .user-account > div > strong {
+  background: url(/v4/media/icons/person.svg) center left no-repeat;
+  background-position: top 2px left 0;
+  padding-left: 20px;
+  font-family: "gilroy";
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  padding-bottom: 3px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+header.top .user .user-account > div > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #e0e2e2;
+  border-radius: 5px;
+  background: #ffffff;
+  z-index: 2;
+  padding: 15px 20px;
+  display: none;
+}
+
+header.top .user .user-account > div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header.top .user .user-account > div ul li {
+  padding-bottom: 10px;
+}
+
+header.top .user .user-account > div ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+header.top .user .user-account > div ul li a {
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-family: "gilroy";
+  font-weight: 400;
+  color: #1e1e1e;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: left;
+  display: block;
+}
+
+header.top .user .user-account.active > div > div {
+  display: block;
+}
+
+header.top .user .user-level {
+  text-align: right;
+  align-self: start;
+}
+
+header.top .user .user-level span {
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding-top: 3px;
+  display: inline-block;
+}
+
+header.sub {
+  background: #1e1e1e;
+}
+
+@media screen and (max-width: 800px) {
+  header.sub {
+    padding: 20px 10px 20px 20px;
+  }
+}
+
+header.sub > div {
+  grid-template-columns: 1fr auto;
+  grid-gap: 10px;
+}
+
+header.sub .menu {
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 800px) {
+  header.sub .menu {
+    display: none;
+  }
+}
+
+header.sub .menu li:first-of-type {
+  padding-left: 0;
+}
+
+header.sub .mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  header.sub .mobile-menu {
+    display: block;
+  }
+}
+
+header.sub .mobile-menu span {
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  align-self: start;
+  padding: 8px 15px 8px 7px;
+  cursor: pointer;
+}
+
+header.sub .mobile-menu em {
+  font-style: normal;
+  color: #ffffff;
+}
+
+header.sub form {
+  display: grid;
+  padding-right: 10px;
+  position: relative;
+}
+
+header.sub form div.search-box {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 5px 10px 5px 5px;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+header.sub form div.search-box input {
+  font-family: "gilroy";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  outline: none;
+  border: 0;
+  background: 0;
+  color: #ffffff;
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 500px) {
+  header.sub form div.search-box input {
+    max-width: 125px;
+  }
+}
+
+header.sub form div.search-box input:focus {
+  outline: none;
+  border: 0;
+}
+
+header.sub form div.search-box button {
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  background: 0;
+}
+
+header.sub form div.search-box button img {
+  width: 24px;
+}
+
+header.sub form div.search-box-results {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  margin-top: 70px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e2e2;
+  min-width: 300px;
+  box-sizing: border-box;
+  z-index: 10;
+  display: none;
+}
+
+header.sub form div.search-box-results.active {
+  display: block;
+}
+
+@media screen and (max-width: 800px) {
+  header.sub form div.search-box-results {
+    margin-top: 50px;
+  }
+}
+
+header.sub form div.search-box-results ul {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+header.sub form div.search-box-results ul li {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #e0e2e2;
+  cursor: pointer;
+}
+
+header.sub form div.search-box-results ul li:last-of-type {
+  margin-bottom: 0;
+  border: 0;
+}
+
+header.sub form div.search-box-results ul li > strong {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #a4b1b7;
+  display: block;
+}
+
+header.sub form div.search-box-results ul li > span {
+  font-family: "gilroy";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #1e1e1e;
+  display: block;
+}
+
+header.sub form div.search-box-results ul li > em {
+  font-family: "gilroy";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #4d5fd3;
+  display: block;
+}
+
+footer {
+  height: 200px;
+  display: grid;
+}
+
+footer span {
+  align-self: center;
+  justify-self: center;
+  color: #a4b1b7;
+}
+
+.info-bar {
+  border-bottom: 1px solid #e0e2e2;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  .info-bar {
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info-bar {
+    overflow-x: scroll;
+  }
+}
+
+.info-bar .container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.info-bar .container .info-boxes {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 30px;
+  min-width: 1020px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  .info-bar .container .info-boxes {
+    padding-right: calc((100vw - 800px) / 2);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info-bar .container .info-boxes {
+    padding-right: 10px;
+  }
+}
+
+.info-bar .container .box {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "title icon" "info  icon" "highlight icon";
+}
+
+.info-bar .container .box em {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #a4b1b7;
+  grid-area: title;
+  align-self: start;
+}
+
+.info-bar .container .box strong {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #1e1e1e;
+  grid-area: info;
+  align-self: center;
+}
+
+.info-bar .container .box span {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #1e1e1e;
+  grid-area: highlight;
+  align-self: end;
+}
+
+.info-bar .container .box .icon {
+  height: 45px;
+  width: 45px;
+  border-radius: 10px;
+  grid-area: icon;
+  align-self: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.info-bar .container .info-green span {
+  color: #48bb78;
+}
+
+.info-bar .container .info-green .icon {
+  background: #48bb78;
+}
+
+.info-bar .container .info-amber span {
+  color: #ff9244;
+}
+
+.info-bar .container .info-amber .icon {
+  background: #ff9244;
+}
+
+.info-bar .container .info-red span {
+  color: #c5292a;
+}
+
+.info-bar .container .info-red .icon {
+  background: #c5292a;
+}
+
+.sub-sub-menu {
+  padding: 30px 0 10px;
+}
+
+.sub-sub-menu.sub-sub-desktop-menu {
+  display: none;
+}
+
+@media screen and (min-width: 1060px) {
+  .sub-sub-menu.sub-sub-desktop-menu {
+    display: block;
+  }
+}
+
+.sub-sub-menu.sub-sub-mobile-menu {
+  display: block;
+  padding: 30px 0 30px;
+}
+
+@media screen and (min-width: 1060px) {
+  .sub-sub-menu.sub-sub-mobile-menu {
+    display: none;
+  }
+}
+
+.sub-sub-menu > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.sub-sub-menu > ul > li {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  margin-right: 20px;
+  border-radius: 10px;
+  background: #e0e2e2;
+  transition: background 200ms ease-in-out;
+  padding: 10px 20px;
+  position: relative;
+  border: 1px solid #e0e2e2;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  .sub-sub-menu > ul > li {
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 10px 15px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sub-sub-menu > ul > li {
+    font-style: normal;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 10px 15px;
+    margin-right: 10px;
+  }
+}
+
+.sub-sub-menu > ul > li a {
+  color: #1e1e1e;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.sub-sub-menu > ul > li.on,
+.sub-sub-menu > ul > li:hover {
+  background: #ffffff;
+}
+
+.sub-sub-menu > ul > li > div > a {
+  background: url(/v4/media/icons/chevron-down.svg) center right no-repeat;
+  padding-right: 30px;
+}
+
+.sub-sub-menu > ul > li ul {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  list-style: none;
+  padding: 10px 0;
+  width: auto;
+  min-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #e0e2e2;
+  margin: 0;
+  display: none;
+  background: #ffffff;
+}
+
+.sub-sub-menu > ul > li ul li {
+  padding: 0 40px 0 20px;
+  margin-bottom: 8px;
+}
+
+.sub-sub-menu > ul > li ul li:first-of-type a span {
+  border-bottom: 0;
+}
+
+.sub-sub-menu > ul > li ul li:last-of-type {
+  margin-bottom: 0;
+}
+
+.sub-sub-menu > ul > li ul li.on,
+.sub-sub-menu > ul > li ul li:hover {
+  background: url(/v4/media/icons/tick-black.svg) center right no-repeat;
+  background-size: 22px;
+  background-position: right 10px top 1px;
+}
+
+.sub-sub-menu > ul > li ul li a {
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+}
+
+.sub-sub-menu > ul > li.active ul {
+  display: grid;
+  z-index: 30;
+}
+
+.sub-sub-menu.sub-sub-mobile-menu > ul > li {
+  background: #ffffff url(/v4/media/icons/menu-large-black.svg) center left no-repeat;
+  background-position: top 8px left 8px;
+  padding-left: 38px;
+  cursor: pointer;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  padding: 30px 20px 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 0 0 30px;
+  }
+}
+
+.title .titles {
+  align-self: end;
+}
+
+.title .titles h2 {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  color: #a4b1b7;
+  margin: 0;
+}
+
+.title .titles h1 {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 3.2rem;
+  line-height: 4.5rem;
+  color: #4d5fd3;
+  margin: 0;
+}
+
+.title .titles h1 span {
+  color: #1e1e1e;
+}
+
+.title .title-buttons {
+  align-self: end;
+}
+
+.table .intro {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .table .intro {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+}
+
+.table .intro h3 {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  color: #1e1e1e;
+  margin: 0;
+}
+
+.table .intro .buttons {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  grid-gap: 16px;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .table .intro .buttons {
+    grid-auto-flow: row;
+  }
+}
+
+.table .intro .buttons > div {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border: 1px solid #e0e2e2;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  .table .intro .buttons .search {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .table .intro .buttons .search {
+    display: none;
+  }
+}
+
+.table .intro .buttons .search form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+.table .intro .buttons .search input {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #1e1e1e;
+  border: 0;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+.table .intro .buttons .search input:focus {
+  border: 0;
+  outline: none;
+}
+
+.table .intro .buttons .search button {
+  border: 0;
+  outline: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
+  height: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.table .intro .buttons .search button img {
+  height: 20px;
+  width: 20px;
+}
+
+.table .intro .buttons .filter > div {
+  background: url(/v4/media/icons/filter-black.svg) center right no-repeat;
+  padding-right: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.table .intro .buttons .sort {
+  position: relative;
+}
+
+.table .intro .buttons .sort > div {
+  background: url(/v4/media/icons/chevron-down.svg) center right no-repeat;
+  padding-right: 24px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.table .intro .buttons .sort > div > div {
+  position: absolute;
+  border: 1px solid #e0e2e2;
+  border-radius: 5px;
+  background: #ffffff;
+  top: -1px;
+  left: -1px;
+  width: 100%;
+  display: none;
+}
+
+.table .intro .buttons .sort > div ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 16px;
+}
+
+.table .intro .buttons .sort > div ul li {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding-bottom: 5px;
+}
+
+.table .intro .buttons .sort > div ul li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.table .intro .buttons .sort > div ul li.active,
+.table .intro .buttons .sort > div ul li:hover {
+  background: url(/v4/media/icons/tick-black.svg) center right no-repeat;
+  background-size: 15px;
+  background-position: right 1px;
+}
+
+.table .intro .buttons .sort.active {
+  cursor: none;
+}
+
+.table .intro .buttons .sort.active > div > div {
+  display: block;
+}
+
+.table .table-block {
+  display: table;
+  width: 100%;
+}
+
+.table .table-block .row {
+  display: table-row;
+}
+
+.table .table-block .cell {
+  display: table-cell;
+  vertical-align: middle;
+  border-top: 1px solid #e0e2e2;
+  padding: 10px;
+}
+
+.table .table-block .cell:first-of-type {
+  padding-left: 0;
+}
+
+.table .table-block .cell:last-of-type {
+  padding-right: 0;
+}
+
+.table .table-block .cell > strong {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #1e1e1e;
+  display: block;
+}
+
+.table .table-block .cell > span {
+  font-family: "gilroy";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #a4b1b7;
+  display: block;
+}
+
+.table .table-block .cell.cell-menu {
+  padding-right: 0;
+  text-align: end;
+}
+
+.table .table-block .cell.cell-menu > div {
+  position: relative;
+}
+
+.table .table-block .cell.cell-menu > div img {
+  cursor: pointer;
+  padding: 10px 0 10px 10px;
+}
+
+.table .table-block .cell.cell-menu > div > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid #e0e2e2;
+  border-radius: 5px;
+  background: #4d5fd3;
+  z-index: 2;
+  padding: 15px 20px;
+  display: none;
+}
+
+.table .table-block .cell.cell-menu > div.open > div {
+  display: block;
+}
+
+.table .table-block .cell.cell-menu > div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.table .table-block .cell.cell-menu > div ul li {
+  padding-bottom: 10px;
+}
+
+.table .table-block .cell.cell-menu > div ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+.table .table-block .cell.cell-menu > div ul li a {
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-family: "gilroy";
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: left;
+  display: block;
+}
+
+.table .table-block .cell.cell-menu > div.active > div {
+  display: block;
+}
+
+.table .table-block .head {
+  display: table-row;
+}
+
+.table .table-block .head .cell {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #a4b1b7;
+  text-transform: uppercase;
+  padding-top: 25px;
+  border-top: none;
+}
+
+.table .table-block .head .cell:last-of-type {
+  width: 40px;
+}
+
+.table .table-block.table-width-2 .head .cell {
+  width: 50%;
+}
+
+.table .table-block.table-width-3 .head .cell {
+  width: 33%;
+}
+
+.table .table-block.table-width-4 .head .cell {
+  width: 25%;
+}
+
+.table .table-block.table-width-5 .head .cell {
+  width: 20%;
+}
+
+.table .table-block.table-width-6 .head .cell {
+  width: 17%;
+}
+
+.filter-results {
+  background: #eff1f3;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "filters description";
+  margin: 30px 0 0 0;
+}
+
+@media screen and (max-width: 500px) {
+  .filter-results {
+    grid-template-areas: "description" "filters";
+  }
+}
+
+.filter-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  grid-area: filters;
+}
+
+@media screen and (max-width: 500px) {
+  .filter-results ul {
+    display: grid;
+    grid-gap: 10px;
+    padding-top: 20px;
+  }
+}
+
+.filter-results ul li {
+  border: 1px solid #e0e2e2;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  background: #ffffff;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.filter-results ul li span {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.filter-results ul li a {
+  background: url(/v4/media/icons/close-black.svg) center right no-repeat;
+  height: 22px;
+  width: 22px;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.filter-results > span {
+  border-left: 2px solid #ffffff;
+  align-self: center;
+  padding: 10px 10px 10px 20px;
+  grid-area: description;
+}
+
+@media screen and (max-width: 500px) {
+  .filter-results > span {
+    border-left: 0;
+    border-bottom: 2px solid #ffffff;
+    padding: 10px 10px 20px 10px;
+    text-align: center;
+  }
+}
+
+.pagination {
+  padding-top: 30px;
+  display: grid;
+  grid-template-areas: "- pagination";
+  align-items: end;
+  grid-template-columns: 1fr auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media screen and (max-width: 500px) {
+  .pagination {
+    grid-template-areas: "pagination";
+  }
+}
+
+.pagination > div {
+  border-radius: 5px;
+  grid-area: pagination;
+  background: #ffffff;
+  position: relative;
+}
+
+.pagination > div.active form {
+  display: block;
+}
+
+.pagination ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .pagination ul {
+    display: grid;
+    grid-gap: 3px;
+    grid-auto-flow: column;
+    padding: 10px;
+  }
+}
+
+.pagination ul li a,
+.pagination ul li span {
+  display: block;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-family: "gilroy";
+  font-weight: 400;
+  color: #1e1e1e;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+.pagination ul li:first-child a,
+.pagination ul li:last-child a {
+  font-family: "gilroy";
+  font-weight: 800;
+  color: #4d5fd3;
+}
+
+.pagination ul li.active a {
+  font-family: "gilroy";
+  font-weight: 800;
+  color: #4d5fd3;
+}
+
+.pagination ul li a:hover,
+.pagination ul li span:hover {
+  background: #4d5fd3;
+  color: #ffffff;
+}
+
+.pagination form {
+  position: absolute;
+  display: none;
+  left: 0;
+  margin: 10px 0 0 0;
+  background: #e0e2e2;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.pagination form span {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 0;
+  margin-top: -35px;
+  right: 20px;
+  background: transparent;
+  border: 20px solid black;
+  border-color: transparent transparent #e0e2e2 transparent;
+}
+
+.pagination form > div {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.pagination form > div input {
+  font-family: "gilroy";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  border-radius: 10px 0 0 10px;
+  border: 0;
+  padding: 0 10px;
+}
+
+.pagination form > div input:focus {
+  outline: 0;
+}
+
+.pagination form > div button {
+  border-radius: 0 10px 10px 0;
+}
+
+.pagination form > div img {
+  width: 20px;
+}
+
+b.tag {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #1e1e1e;
+  background: #a4b1b7;
+  padding: 2px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+b.tag.red {
+  background: #c5292a;
+  color: #ffffff;
+}
+
+b.tag.amber {
+  background: #ff9244;
+  color: #ffffff;
+}
+
+b.tag.green {
+  background: #48bb78;
+  color: #ffffff;
+}
+
+.mobile-sub-menu-popup,
+.mobile-menu-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #eff1f3;
+  overflow-y: scroll;
+  display: none;
+}
+
+.mobile-sub-menu-popup > div,
+.mobile-menu-popup > div {
+  height: 50px;
+  background: #4d5fd3;
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.mobile-sub-menu-popup > div span,
+.mobile-menu-popup > div span {
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  font-family: "gilroy";
+  font-weight: 600;
+  color: #ffffff;
+  background: url(/v4/media/icons/close-white.svg) center right no-repeat;
+  padding-right: 25px;
+  cursor: pointer;
+}
+
+.mobile-sub-menu-popup > ul,
+.mobile-menu-popup > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #eff1f3;
+  border-bottom: 1px solid #e0e2e2;
+}
+
+.mobile-sub-menu-popup > ul > li > a,
+.mobile-sub-menu-popup > ul > li span,
+.mobile-menu-popup > ul > li > a,
+.mobile-menu-popup > ul > li span {
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-family: "gilroy";
+  font-weight: 700;
+  color: #1e1e1e;
+  display: block;
+  padding: 10px 20px;
+}
+
+.mobile-sub-menu-popup > ul > li.active a,
+.mobile-menu-popup > ul > li.active a {
+  font-family: "gilroy";
+  font-weight: 700;
+  color: #4d5fd3;
+}
+
+.mobile-sub-menu-popup > ul > li > a,
+.mobile-menu-popup > ul > li > a {
+  border-bottom: 1px solid #e0e2e2;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.mobile-sub-menu-popup > ul > li > a:after,
+.mobile-menu-popup > ul > li > a:after {
+  content: ">";
+}
+
+.mobile-sub-menu-popup > ul > li > a:hover,
+.mobile-menu-popup > ul > li > a:hover {
+  color: #4d5fd3;
+}
+
+.mobile-sub-menu-popup > ul ul,
+.mobile-menu-popup > ul ul {
+  background: #ffffff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-sub-menu-popup > ul ul > li.active a,
+.mobile-menu-popup > ul ul > li.active a {
+  font-family: "gilroy";
+  font-weight: 700;
+  color: #4d5fd3;
+}
+
+.mobile-sub-menu-popup > ul ul > li a,
+.mobile-menu-popup > ul ul > li a {
+  font-family: "gilroy";
+  font-weight: 600;
+  border-bottom: 1px solid #e0e2e2;
+  text-decoration: none;
+  color: #1e1e1e;
+  transition: color 200ms ease-in-out;
+  padding: 10px 20px 10px 50px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.mobile-sub-menu-popup > ul ul > li a:after,
+.mobile-menu-popup > ul ul > li a:after {
+  content: ">";
+}
+
+.mobile-sub-menu-popup > ul ul > li a:hover,
+.mobile-menu-popup > ul ul > li a:hover {
+  color: #4d5fd3;
+}
+
+body.has-mobile-menu {
+  overflow: hidden;
+}
+
+body.has-mobile-menu .mobile-menu-popup {
+  display: block;
+}
+
+body.has-mobile-sub-menu {
+  overflow: hidden;
+}
+
+body.has-mobile-sub-menu .mobile-sub-menu-popup {
+  display: block;
+}
+
+.dialog-container {
+  background: rgba(30, 30, 30, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.dialog-container .dialog {
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 20px;
+  align-self: center;
+  justify-self: center;
+  margin: 50px 0;
+  min-width: 400px;
+}
+
+@media screen and (max-width: 800px) {
+  .dialog-container .dialog {
+    min-width: 90vw;
+    box-sizing: border-box;
+  }
+}
+
+.dialog-container .dialog .close {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  display: grid;
+  justify-items: end;
+  padding-bottom: 10px;
+}
+
+.dialog-container .dialog .close span {
+  cursor: pointer;
+  padding-right: 25px;
+  background: url(/v4/media/icons/close-black.svg) center right no-repeat;
+}
+
+.dialog-container .dialog .close:hover span {
+  -webkit-animation: pulse-22 1s infinite;
+          animation: pulse-22 1s infinite;
+}
+
+.dialog .fields {
+  padding: 20px;
+}
+
+.dialog .buttons {
+  padding: 25px 0 0 0;
+  margin-top: 25px;
+  border-top: 1px solid #e0e2e2;
+}
+
+.dialog .buttons .button {
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  width: 100%;
+}
+
+.dialog .buttons .button img {
+  height: 25px;
+}
+
+.dialog .buttons .cancel-wrapper {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin: 10px;
+  display: grid;
+  justify-content: center;
+}
+
+.dialog .buttons .cancel-wrapper .cancel {
+  cursor: pointer;
+  padding: 10px;
+  transition: color 200ms ease-in-out;
+}
+
+.dialog .buttons .cancel-wrapper .cancel:hover {
+  color: rgba(77, 95, 211, 0.8);
+}
+
+body.has-dialog {
+  overflow: hidden;
+}
+
+body.has-dialog .dialog-container.active {
+  display: grid;
+}
+
+h4 {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  margin: 0;
+  padding: 0 0 30px 0;
+}
+
+.fields {
+  background: #eff1f3;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.fields .field {
+  padding-bottom: 30px;
+  display: grid;
+}
+
+.fields .field:last-of-type {
+  padding-bottom: 0;
+}
+
+.fields .field label {
+  font-family: "gilroy";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding-bottom: 8px;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.fields .field input[type=text],
+.fields .field input[type=email],
+.fields .field input[type=number] {
+  font-family: "gilroy";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #1e1e1e;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #e0e2e2;
+  display: block;
+}
+
+.fields .field input[type=text]:focus,
+.fields .field input[type=email]:focus,
+.fields .field input[type=number]:focus {
+  outline: none;
+}
+
+.fields .field .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fields .field .list.list-checkboxes li label {
+  font-family: "gilroy";
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  position: relative;
+  cursor: pointer;
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.fields .field .list.list-checkboxes li label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.fields .field .list.list-checkboxes li label input:checked ~ span {
+  background-size: 20px 20px;
+}
+
+.fields .field .list.list-checkboxes li label span {
+  top: 0;
+  left: 0;
+  display: block;
+  background: #ffffff url(/v4/media/icons/tick-black.svg) center center no-repeat;
+  background-size: 20px 0;
+  border: 1px solid rgba(30, 30, 30, 0.2);
+  border-radius: 5px;
+  height: 25px;
+  width: 25px;
+  transition: background-size 200ms ease-in-out;
+}
+
+.fields .field .list.list-checkboxes li label em {
+  font-style: normal;
+}
+
+
+
+
+
+

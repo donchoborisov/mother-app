@@ -1,49 +1,23 @@
 <template>
-    <div >
-          <p>
-                    <label for="">Topic</label>
-                    <select name="topic" required>
-                       <option value="">Select Topic</option>
-                       <option  v-for="topic in topics" :key="topic.id" value="{{topic.id}}">{{ topic.name }}</option>
-                       
-                    </select>
-                     
-                   
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Example Component</div>
 
-                        
-                  </p>
+                    <div class="card-body">
+                        I'm an example component.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
-     import axios from 'axios'
     export default {
-       
-
-        data() {
-
-            return {
-                topics:{}
-            }
-           
-        },
-
-         mounted() {
-           this.gettopics();
-        },
-
-        methods: {
-            gettopics() {
-                axios.get('/topics').then( (response) => {
-
-                    this.topics = response.data.topics
-                } ).catch ((errors) => {
-                    console.log(errors)
-                } );
-            }
+        mounted() {
+            console.log('Component mounted.')
         }
-
-
-
     }
 </script>
