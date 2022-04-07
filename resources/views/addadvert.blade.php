@@ -41,9 +41,9 @@
               {{ Session::get('success') }}
             </div>
               
-         
+          @endif
         
-            @endif 
+            
           
         
         
